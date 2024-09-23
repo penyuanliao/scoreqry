@@ -8,7 +8,7 @@ import { obfuscator } from 'rollup-obfuscator'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/dist/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/dist/scoreqry' : '/scoreqry',
   plugins: [vue(), vueJsx(), vueDevTools()],
   resolve: {
     alias: {

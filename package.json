@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "author": "Benson",
   "scripts": {
     "dev": "vite --host",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -15,8 +16,9 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bcryptjs": "^2.4.3",
-    "bootstrap": "^5.2.3",
+    "bootstrap": "^5.3.3",
     "bootstrap-icons-vue": "^1.11.3",
+    "bootstrap-vue": "^2.23.1",
     "convert-csv-to-json": "^2.48.0",
     "crypto-js": "^4.2.0",
     "pinia": "^2.1.7",
@@ -24,12 +26,15 @@
     "sass-loader": "^16.0.1",
     "vue": "^3.4.29",
     "vue-cryptojs": "^2.4.7",
+    "vue-i18n": "^10.0.0",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^5.0.0",
     "@rushstack/eslint-patch": "^1.8.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/bcryptjs": "^2.4.6",
+    "@types/bootstrap": "^5.2.10",
     "@types/crypto-js": "^4.2.2",
     "@types/node": "^20.14.5",
     "@vitejs/plugin-vue": "^5.0.5",
@@ -39,6 +44,7 @@
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.23.0",
+    "font-awesome": "^4.7.0",
     "javascript-obfuscator": "^4.1.1",
     "npm-run-all2": "^6.2.0",
     "prettier": "^3.2.5",
