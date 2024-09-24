@@ -72,26 +72,21 @@
     </div>
   </div>
   <UserView v-if="isLogin == true" />
-  <div class="foot">
-    <div class="inner text-center">
-      <p>
-        Designed by <a href="https://www.linkedin.com/in/benson-rd-programer">@Benson</a> © 2015 –
-        2024.
-      </p>
-    </div>
-  </div>
 </template>
 
 <script lang="ts">
 import { storeToRefs } from 'pinia'
-import { computed, defineComponent, ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 import ScoreStore from '@/stores/scoreStore'
 import UserView from '@/components/UserView.vue'
-import cryptojs from 'crypto-js'
+// import cryptojs from 'crypto-js'
 export default defineComponent({
   name: 'LoginView',
   components: {
     UserView
+  },
+  beforeRouteEnter(to, from) {
+    console.log(to, from)
   },
   setup() {
     const secretKey = '$2b$10$gHpceWMiWxIb6ql44RtxcuVitSX1QVqa3uewyJOCz'
@@ -102,7 +97,7 @@ export default defineComponent({
     const password = ref('')
     const hidden = ref(false)
     const handleLogin = () => {
-      console.log('handleLogin', username.value, password.value)
+      // console.log('handleLogin', username.value, password.value)
       scoreStore.login(username.value, password.value)
       hidden.value = !scoreStore.isAuth
       if (hidden.value) {
